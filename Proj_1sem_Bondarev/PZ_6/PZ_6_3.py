@@ -15,3 +15,5 @@ for i in range(1, N-1):
 for i in range(1, N-1):
     if A[i] == 9999999:
         A[i] = 0
+
+print("Результат:\n", A)
