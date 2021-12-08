@@ -16,11 +16,18 @@ def digitcountsum(k, result):
     result['S'] = _sum
 
 
+for i in range(5):
+    K = random.randrange(1, 10000)
+    print("Исходное: ", K)
+
+print()
+
 r = {'C': None, 'S': None}
 for i in range(5):
     K = random.randrange(1, 10000)
-    print("Число ", i + 1, ": ", K)
     digitcountsum(K, r)
+
+    print("Число ", i + 1, ": ", K)
     print('Количество цифр = ', r['C'])
     print('Сумма цифр = ', r['S'])
     print()
