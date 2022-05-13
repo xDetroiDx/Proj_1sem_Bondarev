@@ -1,16 +1,10 @@
 # 1.Из последовательности на n целых чисел создать новую последовательность, в
 # которой каждый последующий элемент равен квадрату суммы двух соседних элементов.
 
-import random
+from random import randint
 
-N = int(input("Введите длинну списка: "))
-a = sorted([random.randint(0, N) for i in range(N)])
-s = 0
-print("Список без изменений: ")
+n = int(input('Введите кол-во целых чисел в последовательности: '))
+a = [randint(-100, 100) for x in range(n)]
 print(a)
-b = []
-for i in range(N-1, -1, -1):
-     s = s+a[i]
-     b.insert(0, s)
-print("Новый список: ")
-print(b)
+s = [(a[i]+a[i+1])*(a[i]+a[i+1]) for i in range(n-1)]
+print(s)
