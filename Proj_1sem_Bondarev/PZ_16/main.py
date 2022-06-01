@@ -67,7 +67,7 @@ class Main(tk.Frame):
         self.view_records()
 
     def update_record(self, user_id, name, sex, old, score, cards, sum):
-        self.db.cur.execute("""UPDATE users SET user_id=?, name=?, sex=?, old=?, score=?, cards=?, sum=?, WHERE user_id=?""",
+        self.db.cur.execute("""UPDATE users SET user_id=?, name=?, sex=?, old=?, score=?, cards=?, sum=? WHERE user_id=?""",
                             (user_id, name, sex, old, score, cards, sum, self.tree.set(self.tree.selection()[0], '#1')))
         self.db.con.commit()
         self.view_records()
