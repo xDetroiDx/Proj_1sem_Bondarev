@@ -45,10 +45,10 @@ class Main(tk.Frame):
         self.tree = ttk.Treeview(self, columns=('user_id', 'name', 'sex', 'old', 'score', 'cards', 'sum'), height=15, show='headings')
 
         self.tree.column('user_id', width=100, anchor=tk.CENTER)
-        self.tree.column('name', width=140, anchor=tk.CENTER)
+        self.tree.column('name', width=220, anchor=tk.CENTER)
         self.tree.column('sex', width=180, anchor=tk.CENTER)
-        self.tree.column('old', width=90, anchor=tk.CENTER)
-        self.tree.column('score', width=140, anchor=tk.CENTER)
+        self.tree.column('old', width=70, anchor=tk.CENTER)
+        self.tree.column('score', width=80, anchor=tk.CENTER)
         self.tree.column('cards', width=140, anchor=tk.CENTER)
         self.tree.column('sum', width=140, anchor=tk.CENTER)
 
@@ -240,6 +240,6 @@ if __name__ == "__main__":
     app = Main(root)
     app.pack()
     root.title("Банк")
-    root.geometry("930x450+300+200")
+    root.geometry("930x375+300+200")
     root.resizable(False, False)
     root.mainloop()
